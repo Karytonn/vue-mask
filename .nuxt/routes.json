@@ -1,0 +1,9 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/workspaces/vue-mask/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1102590a"
+  }
+]
