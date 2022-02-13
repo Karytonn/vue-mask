@@ -17,6 +17,7 @@ Máscara de inputs simples para VueJS e NuxtJs
 ## Utilizando em projetos NuxtJS
 
 Você pode seguir o tutorial abaixou ou assistir o [vídeo explicativo](https://youtu.be/f9mH7Od2mls)
+![YouTube Video Views](https://img.shields.io/youtube/views/f9mH7Od2mls?style=social)
 
 1) Primeiro instale a dependência
 
