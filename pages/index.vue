@@ -8,8 +8,10 @@
           <input id="tel" class="input" type="tel" placeholder="(62) 98888-7777">
 
           <label for="tel" class="label" >Com mascará</label>
-          <input id="tel" class="input" type="tel" placeholder="(62) 98888-7777" v-mask="['(##) ####-####', '(##) #####-####']">
+          <input id="tel" class="input" type="tel" v-model="tel" placeholder="(62) 98888-7777" v-mask="['(##) ####-####', '(##) #####-####']">
 
+          <!-- Descomente o código abaixo para ver o resultado da sanitização após o uso do v-mask -->
+          <!-- <p class="py-4 text-white/90">Saída sanitizada: {{ telSanitizado }}</p> -->
       </div>
   </div>
 </template>
@@ -17,7 +19,19 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+    data() {
+        return {
+            tel: '',
+        }
+    },
+    computed: {
+        // Para caso deseje salvar ou enviar o valor sem mascará
+        telSanitizado(): string {
+            return this.tel.replace(/\D/g, ''); // '62988887777'
+        }
+    },
+})
 </script>
 
 <style lang="postcss" scoped>
